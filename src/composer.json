@@ -1,0 +1,21 @@
+{
+    "name": "alejandro/marsanhost",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Alejandro\\Marsanhost\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alejandro Moreno Garcia"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "phroute/phroute": "*",
+        "ext-pdo": "*",
+        "respect/validation": "^2.5",
+        "vlucas/phpdotenv": "^5.7"
+    }
+}
