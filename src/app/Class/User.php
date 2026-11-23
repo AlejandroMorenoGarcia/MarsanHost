@@ -11,24 +11,20 @@ use Respect\Validation\Validator as v;
 
 class User implements JsonSerializable
 {
-    private UuidInterface $id;
+    private int $id;
     private string $name;
     private string $email;
     private string $password;
     private DateTime $birthdate;
     private string $phone;
-    private array $favApartments;
 
 
     public function __construct()
     {
-        $this->favApartments=[];
     }
 
-    public function getId(): Uuid{return $this->id;}
-    public function setId(Uuid $id): void{$this->id = $id;}
-    public function getFavApartments(): array{return $this->favApartments;}
-    public function setFavApartments(array $favApartments): void{$this->favApartments = $favApartments;}
+    public function getId(): int{return $this->id;}
+    public function setId(int $id): void{$this->id = $id;}
     public function getPhone(): string{return $this->phone;}
     public function setPhone(string $phone): void{$this->phone = $phone;}
     public function getBirthdate(): DateTime{return $this->birthdate;}
@@ -76,7 +72,6 @@ class User implements JsonSerializable
                 \DateTime::createFromFormat(
                     'Y-m-d', '1900-01-01'));
         }
-
         return $usuario;
     }
 
@@ -87,4 +82,6 @@ class User implements JsonSerializable
         }
         return $usuarios;
     }
+
+
 }

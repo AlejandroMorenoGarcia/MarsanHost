@@ -4,14 +4,15 @@ namespace App\Controllers;
 
 use App\Class\User;
 use App\Interfaces\ControllerInterface;
-use Ramsey\Uuid\Uuid;
+use App\Models\UserModel;
 
 class UserController implements ControllerInterface
 {
 
     public function index()
     {
-        return "Informacion de todos los usuarios";
+        $usuarios = UserModel::getUsers();
+        var_dump($usuarios);
     }
 
     public function show(int $id)
