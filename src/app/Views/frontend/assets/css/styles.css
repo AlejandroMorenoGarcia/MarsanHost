@@ -179,3 +179,30 @@ button,input,select,textarea{font:inherit;color:inherit}
   .footer-grid{grid-template-columns:1fr}
   .section-head{flex-direction:column;align-items:flex-start}
 }
+
+/* Autenticación (login, registro) */
+.auth{padding-block:var(--space-7)}
+.auth-card{display:grid;grid-template-columns:1fr 1fr;max-width:920px;margin-inline:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-l);box-shadow:var(--shadow-m);overflow:hidden}
+.auth-aside{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;gap:var(--space-4);padding:var(--space-7) var(--space-6)}
+.auth-aside::before{content:"";position:absolute;right:-30%;top:-25%;width:80%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 40% 40%,var(--primary) 0 55%,var(--tertiary) 100%)}
+.auth-aside>*{position:relative}
+.auth-aside h1{font-size:var(--fs-700)}
+.auth-aside p{color:#C9CEDA}
+.auth-body{padding:var(--space-7) var(--space-6)}
+.auth-body .form{margin-block:var(--space-5) 0}
+.auth-body h2{font-size:var(--fs-600)}
+.auth-body>p{margin-top:var(--space-2)}
+.auth-body .field{gap:var(--space-2)}
+.auth-body .btn--block{height:3.5rem;font-size:var(--fs-400)}
+.field-row{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3)}
+.link{font-size:var(--fs-300);font-weight:600;text-decoration:underline;text-decoration-color:var(--primary);text-decoration-thickness:2px;text-underline-offset:3px}
+.check{display:flex;align-items:center;gap:var(--space-2);font-size:var(--fs-300);font-weight:600}
+.check input{width:1.1rem;height:1.1rem;accent-color:var(--ink)}
+@media (max-width:760px){.auth-card{grid-template-columns:1fr}.auth-aside{min-height:180px;padding-block:var(--space-6)}}
+.field-pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+.field-hint{font-size:var(--fs-300);color:var(--muted);margin-top:calc(var(--space-2) * -1)}
+.check--top{align-items:flex-start}
+.check--top input{margin-top:.2rem;flex-shrink:0}
+.auth-list{display:grid;gap:var(--space-2);font-size:var(--fs-300);color:#C9CEDA}
+.auth-list li::before{content:"✓";margin-right:var(--space-2);color:var(--primary);font-weight:800}
+@media (max-width:760px){.field-pair{grid-template-columns:1fr}}

@@ -23,7 +23,7 @@
           <li><a href="propietarios.php">Publica tu vivienda</a></li>
           <li><a href="gestion.php">Gestión integral</a></li>
           <li><a href="calculadora.php">Calculadora de ingresos</a></li>
-          <li><a href="login.php">Portal del propietario</a></li>
+          <li><a href="../login.php">Portal del propietario</a></li>
         </ul>
       </div>
       <div>

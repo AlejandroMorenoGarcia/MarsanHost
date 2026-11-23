@@ -12,7 +12,7 @@ services:
         - USER_GID=${USUARIO_GID:-1000}
     container_name: mhcontainerphp
 
-    user: ${USUARIO:-app}:${USUARIO:-app}
+    user: ${USUARIO_UID:-app}:${USUARIO_GID:-app}
 
     #Crear un volumen para almacenar mi página web
     volumes:

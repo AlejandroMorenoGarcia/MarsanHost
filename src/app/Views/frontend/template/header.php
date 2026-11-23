@@ -13,7 +13,7 @@
           <a href="propietarios.php" <?= $paginaActual === 'propietarios' ? 'aria-current="page"' : '' ?>>Para propietarios</a>
       </nav>
     <div class="header-actions">
-      <a class="btn btn--ghost btn--sm" href="login.php">Entrar</a>
+      <a class="btn btn--ghost btn--sm" href="../login.php">Entrar</a>
       <a class="btn btn--primary btn--sm" href="register.php">Crear cuenta</a>
     </div>
   </div>
