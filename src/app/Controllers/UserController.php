@@ -17,7 +17,8 @@ class UserController implements ControllerInterface
 
     public function show(int $id)
     {
-        return "Informacion del usuario $id";
+        $usuario = UserModel::getUserById($id);
+        var_dump($usuario);
     }
 
     public function create()
