@@ -8,11 +8,13 @@ use PDOException;
 
 class UserModel
 {
-
     public static function getUsers():array{
         $conexion = "";
         try {
-            $conexion = new PDO("mysql:host=mariadb;dbname=mhdatabase","marsanhost","marsanhost");
+            $dns= "mysql:host=mariadb;dbname=" . $_ENV['MARIADB_NAME'];
+            $usuarioBD = $_ENV['MARIADB_USER'];
+            $passworBD = $_ENV['MARIADB_PASSWORD'];
+            $conexion = new PDO($dns,$usuarioBD,$passworBD);
             $conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         }catch (PDOException $e){
             echo $e->getMessage();
@@ -28,7 +30,10 @@ class UserModel
     public static function getUserById($id):User|false{
         $conexion = "";
         try {
-            $conexion = new PDO("mysql:host=mariadb;dbname=mhdatabase","marsanhost","marsanhost");
+            $dns= "mysql:host=mariadb;dbname=" . $_ENV['MARIADB_NAME'];
+            $usuarioBD = $_ENV['MARIADB_USER'];
+            $passworBD = $_ENV['MARIADB_PASSWORD'];
+            $conexion = new PDO($dns,$usuarioBD,$passworBD);
             $conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         }catch (PDOException $e){
             echo $e->getMessage();
@@ -50,7 +55,10 @@ class UserModel
     public static function addNewUser(){
         $conexion = "";
         try {
-            $conexion = new PDO("mysql:host=mariadb;dbname=mhdatabase","marsanhost","marsanhost");
+            $dns= "mysql:host=mariadb;dbname=" . $_ENV['MARIADB_NAME'];
+            $usuarioBD = $_ENV['MARIADB_USER'];
+            $passworBD = $_ENV['MARIADB_PASSWORD'];
+            $conexion = new PDO($dns,$usuarioBD,$passworBD);
             $conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         }catch (PDOException $e){
             echo $e->getMessage();
